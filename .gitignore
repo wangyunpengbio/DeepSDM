@@ -43,6 +43,7 @@ build
 
 # not ignore demo input
 !/input/test-dcm/*
+!/input/dataset/test/*
 
 # not ignore markdown images
 !/imgs/*

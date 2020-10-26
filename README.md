@@ -52,7 +52,7 @@ pip install -r requirements.txt
 ## Usage
 
 ### Prerequisite
-Before using the code in this repository, you should install the required packages and then download the weights of the well-trained DeepSDM from the cloud storage. The weights should be put into the directory `experiments/demo/checkpoint` as mentioned above in the 'Code Structure' section if you follow this tutorial.
+Before using the code in this repository, you should install the required packages and then download the weights of the well-trained DeepSDM from the cloud storage. **The weights should be put into the directory `experiments/demo/checkpoint` as mentioned above in the 'Code Structure' section if you follow this tutorial.**
 
 ### Step 1: Dataset preparation
 Firstly, we need to convert the `Dicom` files to `png` format and prepare the dataset directory. For the sample data we uploaded in this repository, you can easily use the following command to prepare the dataset.
@@ -123,3 +123,6 @@ optional arguments:
                         process config file path
 ```
 If you follow every step in this tutorial, you will find the results in `input/dataset/postprocess_result`. The `png` files can be viewed directly and the `*.nii.gz` can be viewed using the software [`itk-SNAP`](http://www.itksnap.org/pmwiki/pmwiki.php).
+
+![Introduction.png](https://github.com/wangyunpengbio/DeepSDM/raw/master/imgs/2-demo.png
+)
