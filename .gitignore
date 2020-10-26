@@ -1,0 +1,48 @@
+# ignore all logs
+*.log
+
+# ignore pycache
+*__pycache__
+
+# ignore pth
+*.pth
+
+# ignore data
+*.npy
+*.png
+*.dcm
+*.csv
+*.nii.gz
+
+# ignore jupyter jopascripts
+*.ipynb_checkpoints*
+*.ipynb
+
+# ignore specific files
+*log*
+*.out
+*trash*
+*checkpoints*
+*checkpoint*
+*folds*csv
+*.sh
+*.pkl
+stat-result*
+comparison-result*
+backup*
+tmp*
+
+# ignore python complie
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+*pyc
+
+# not ignore demo input
+!/input/test-dcm/*
+
+# not ignore markdown images
+!/imgs/*

@@ -1,0 +1,30 @@
+DATA_DIRECTORY: '../input/dataset'
+
+DEVICE: cuda
+DEVICE_LIST: [0,1]
+WORKERS: 10
+
+MODEL:
+  PRETRAINED:
+    PIPELINE_PATH: experiments/demo
+    PIPELINE_NAME: baseline
+  PY: models.model_zoo
+  CLASS: Multihead_resnet50_noclassification
+  ARGS:
+      encoder_weights: imagenet
+
+FOLD:
+  USEFOLDS: [0,1,2,3,4]
+
+IMAGE_SIZE: 1024
+
+BATCH_SIZE: 4
+
+FLIP: True
+SUBMIT_BEST: True
+
+CHECKPOINTS:
+    FULL_FOLDER: checkpoint
+    BEST_FOLDER: checkpoint
+
+RESULT_PKL_FILE: inference.pkl

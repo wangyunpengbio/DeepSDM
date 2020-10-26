@@ -1,0 +1,8 @@
+INFERENCE_PKL_FILE: experiments/demo/inference.pkl
+
+MASK_BINARIZER:
+  PY: MaskBinarizers
+  CLASS: FusionMaskBinarization
+  THRESHOLD: [0.75,2000,-0.05]
+
+RESULT_PNG_DIC: ../input/dataset/postprocess_result
