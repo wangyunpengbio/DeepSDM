@@ -1,7 +1,9 @@
 # DeepSDM: Boundary-aware Pneumothorax Segmentation in Chest X-Ray Images
 ## Background
 Pneumothorax can be caused by a blunt chest injury, damage from underlying lung disease, or most horrifying—it may occur for no obvious reason at all. On some occasions, a collapsed lung can be a life-threatening event.
+
 Pneumothorax is usually diagnosed by a radiologist on a chest x-ray, and can sometimes be very difficult to confirm. An accurate AI algorithm to detect pneumothorax would be useful in a lot of clinical scenarios. AI could be used to triage chest radiographs for priority interpretation or to provide a more confident diagnosis for non-radiologists.
+
 **In this repository, we provide a well-trained pneumothorax diagnosis model, which can perform accurate pneumothorax segmentation in chest X-ray images.**
 ![Introduction.png](https://github.com/wangyunpengbio/DeepSDM/raw/master/imgs/1-intro.png
 )
@@ -36,7 +38,7 @@ pip install -r requirements.txt
     - process.yaml: configuration file for the demo process
     - **checkpoint**: Directory of the weight of the well-trained DeepSDM.
     - **log**: Directory of the training log of DeepSDM.
-      - **Because of the big size of checkpoint and log file, these files can be downloaded from Google drive or Baidu drive**
+      - **Because of the big size of the checkpoint and log file, these files can be downloaded from Google drive or Baidu drive. If you have trouble downloading big files, the minimum required files for this tutorial are `checkpoint/baseline_fold0.pth,checkpoint/baseline_fold1.pth,checkpoint/baseline_fold2.pth,checkpoint/baseline_fold3.pth,checkpoint/baseline_fold4.pth`**
       - Google drive：**xxx**
       - Baidu drive：**xxx** password：**xxx**
 
@@ -122,7 +124,18 @@ optional arguments:
   -config_file [CONFIG_FILE]
                         process config file path
 ```
-If you follow every step in this tutorial, you will find the results in `input/dataset/postprocess_result`. The `png` files can be viewed directly and the `*.nii.gz` can be viewed using the software [`itk-SNAP`](http://www.itksnap.org/pmwiki/pmwiki.php).
+If you follow every step in this tutorial, you will find the results in `input/dataset/postprocess_result`. The `png` files can be viewed directly and two demo chest x-ray images are shown in the figure below. The `*.nii.gz` can be viewed using the software [`itk-SNAP`](http://www.itksnap.org/pmwiki/pmwiki.php). 
 
-![Introduction.png](https://github.com/wangyunpengbio/DeepSDM/raw/master/imgs/2-demo.png
+![Demo-result.png](https://github.com/wangyunpengbio/DeepSDM/raw/master/imgs/2-demo.png
+)
+
+### Additional Tips: Log file check
+If you want to further check the change of the related loss during training, we also provide log files and commands for you. **The log files should be downloaded and put into the directory `experiments/demo/log` as mentioned above in the 'Code Structure' section if you follow this tutorial.** Then you can use the following command to view the log files in `tensorboard`.
+```
+cd code/experiments/demo/log
+tensorboard --logdir=.
+```
+Then, the `tensorboard` will be running on the port `6006` as default. You can view it by opening the browser and entering the URL `http://localhost:6006/`.
+
+![tensorboard-log.png](https://github.com/wangyunpengbio/DeepSDM/raw/master/imgs/3-log.gif
 )
