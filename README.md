@@ -38,9 +38,12 @@ pip install -r requirements.txt
     - process.yaml: configuration file for the demo process
     - **checkpoint**: Directory of the weight of the well-trained DeepSDM.
     - **log**: Directory of the training log of DeepSDM.
-      - **Because of the big size of the checkpoint and log file, these files can be downloaded from Google drive or Baidu drive. If you have trouble downloading big files, the minimum required files for this tutorial are `checkpoint/baseline_fold0.pth,checkpoint/baseline_fold1.pth,checkpoint/baseline_fold2.pth,checkpoint/baseline_fold3.pth,checkpoint/baseline_fold4.pth`**
-      - Google drive：**xxx**
-      - Baidu drive：**xxx** password：**xxx**
+      - **Because of the big size of the checkpoint and log file, these files can be downloaded from Google drive or Baidu drive. If you have trouble downloading big files, the minimum required files for this tutorial are `checkpoint/baseline_fold0.pth, checkpoint/baseline_fold1.pth, checkpoint/baseline_fold2.pth, checkpoint/baseline_fold3.pth, checkpoint/baseline_fold4.pth`**
+      - Google drive：
+      `https://drive.google.com/drive/folders/1HOtJEwZCCH7eXu-Bu3h_qTWKMTuPzedj?usp=sharing`
+      `https://drive.google.com/drive/folders/1hxCvyfmWBsqIF_nswmFnFdClLNkgKvho?usp=sharing`
+      - Baidu drive：`https://pan.baidu.com/s/1IYf_7BPkpCjjetcc2OFzLQ` password：`s3h2`
+
 
   - models: codes used to build the model
   - utils: Directory of some useful scripts

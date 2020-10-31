@@ -97,10 +97,10 @@ def mergeImgAndMask(mask_applied, name, result_dic):
     lower_white = np.array([200,200,200])
     upper_white = np.array([255,255,255])
     mask_white = cv2.inRange(mask_applied_rgb,lower_white,upper_white)
-    color_green=[0,255,255] # 修改为绿色
+    color_green=[139,0,0] # 修改为红色
     mask_applied_rgb[mask_white!=0]=color_green
     # merge img and mask 
-    rate_for_image = 0.7
+    rate_for_image = 0.5
     result = cv2.addWeighted(img_rbg, rate_for_image, mask_applied_rgb, 1 - rate_for_image, 0)
     return img, mask_applied, result
 
